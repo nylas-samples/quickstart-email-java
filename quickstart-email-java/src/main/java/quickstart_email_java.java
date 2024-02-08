@@ -22,7 +22,7 @@ public class quickstart_email_java {
             List<String> scope = new ArrayList<>();
             scope.add("https://www.googleapis.com/auth/gmail.modify");
 
-            UrlForAuthenticationConfig config = new UrlForAuthenticationConfig("a7ac3c13-a324-49ad-91ba-3faf3caf1dc3",
+            UrlForAuthenticationConfig config = new UrlForAuthenticationConfig(dotenv.get("NYLAS_CLIENT_ID"),
                     "http://localhost:4567/oauth/exchange",
                     AccessType.ONLINE,
                     AuthProvider.GOOGLE,
