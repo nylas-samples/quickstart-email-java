@@ -79,7 +79,7 @@ public class quickstart_email_java {
                         body("Your email body here").
                         build();
 
-                Response<Message> email = nylas.messages().send(dotenv.get("GRANT_ID"), requestBody);
+                Response<Message> email = nylas.messages().send(request.session().attribute("grant_id"), requestBody);
                 Gson gson = new Gson();
 
                 return gson.toJson(email.getData());
